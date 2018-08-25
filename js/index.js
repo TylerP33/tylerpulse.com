@@ -151,7 +151,6 @@ function getLanguages() {
 			if (val.language === "CSS") {
 				return console.log(CSSCounter++);
 			} 
-			
 			})
 		)
 	))
