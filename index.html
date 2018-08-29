@@ -5,7 +5,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Arizonia' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="js/index.js"></script>
     <link rel="stylesheet" type="text/css" href="css/index.css">
@@ -15,12 +15,25 @@
   <body>
 
 <!-- canvas -->
-
+<div class="container">
 <section class="canvas">
       <canvas id="first-canvas" style="position:relative; left: 0px; top: 0px;"></canvas>
-      <a href="#"><div id="scroll-btn">
-        <h3>View My Page  <i class="fas fa-arrow-right"></i><i style="display:none" class="fas fa-arrow-down"></i></h3></div></a>
+      <a href="#"></a>
+
+    <div id="scroll-btn">
+      <h1>Welcome to my page</h1>
+      <div id="test">
+        <a href=#>
+          <h3>View My Page  
+            <i class="fas fa-arrow-right"></i>
+            <i style="display:none" class="fas fa-arrow-down"></i>
+          </h3>
+        </a>
+      </div>
+      </div>
 <section>
+
+
 
 
 <!-- navigation bar -->
@@ -47,15 +60,16 @@
     <i class="fas fa-fighter-jet"></i>
     <div><h2>Website Speed</h2></div>
     <div>
-    <p>Quick websites and reduced lag is always a</p>
-    <p>priority. Optimizing for a good user experience is a must.</p>
+    <p>Quick loadtimes and reduced lag is always</p>
+    <p>a priority. Every website must be fast.</p>
   </div>
   </div>
   <div class="flex-fa-icon-container">
     <i class="fas fa-lock"></i>
     <div><h2>User Security</h2></div>
     <div>
-    <p>If you have a database, security is top priority.</p><p>You can rest assured that your users will be safe.</p>
+    <p>User security and trust is pivotal.</p>
+    <p>All data will be accounted for.</p>
   </div>
   </div>
   <div class="flex-fa-icon-container">
@@ -71,8 +85,10 @@
     <div><p>Building to spec keeps customers happy.</p><p>Every website is created with that intention.</p></div>
   </div>
 </div>
+
+
 <div class="image-container">
-    <div class="my-img">
+    <div class="my-img-container">
       <img src="img/test.png"/>
       <div><h2>Hi, it's me.</h2></div>
       <p>I'm an aspiring Full-Stack Developer</p>
@@ -80,13 +96,24 @@
       <p>all the way down to building schema tables, the process is enjoyable.</p>
       <p>It's all fascinating, and I hope it shows in my work.</p>
     </div>
-      <div class="graph-img">
-    </div>
 
-    <div id="test">
+    <div class="graph-img-container">
+          <canvas style="padding-bottom:10px" id="graphCanvas"></canvas>
+            <h2>Designated Github Repo Language</h2>
+            <p>Requested Data from Github API</p>
+          <div id="graph-legend-container">
+            <div id="graph-legend-icon">
+                <i style="font-size:2em;color:#393939;" class="fas fa-square"><p>Ruby</p></i>
+                <i style="font-size:2em;color:#be4f0c;margin:0px;padding:0px;padding-left: 4px; padding-right: 2px" class="fas fa-square"><p>JavaScript</p></i>
+                <i style="font-size:2em;color:#FF5A09;padding-right:15px" class="fas fa-square"><p>HTML</p></i>
+                <i style="font-size:2em;color:#ec7f37" class="fas fa-square"><p>CSS</p></i>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>   
+</div>   
 </section>
+</div>
   </body>
 
 
