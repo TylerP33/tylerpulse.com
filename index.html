@@ -9,6 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="js/index.js"></script>
     <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
  </head>
   <title>Fun Page</title>
 
@@ -21,15 +22,18 @@
       <a href="#"></a>
 
     <div id="scroll-btn">
-      <h1>Welcome to my page</h1>
       <div id="test">
-        <a href=#>
-          <h3>View My Page  
-            <i class="fas fa-arrow-right"></i>
-            <i style="display:none" class="fas fa-arrow-down"></i>
-          </h3>
-        </a>
-      </div>
+      <h1 id="h1-highlight">Hello, my name is <span class="orange">Tyler Pulse</span>.</h1><br/>
+      <h1>I'm a <span class="orange">full-stack</span> web developer.</h1><br/>
+          <div id="button-container">
+            <a style="text-decoration: none;" href="#">
+            <h3>View My Page  
+              <i class="fas fa-arrow-right"></i>
+              <i style="display:none" class="fas fa-arrow-down"></i>
+            </h3>
+            </a>
+          </div>
+        </div>
       </div>
 <section>
 
@@ -84,7 +88,7 @@
     <div><h2>Correct Builds</h2></div>
     <div><p>Building to spec keeps customers happy.</p><p>Every website is created with that intention.</p></div>
   </div>
-</div>
+
 
 
 <div class="image-container">
@@ -103,17 +107,18 @@
             <p>Requested Data from Github API</p>
           <div id="graph-legend-container">
             <div id="graph-legend-icon">
-                <i style="font-size:2em;color:#393939;" class="fas fa-square"><p>Ruby</p></i>
-                <i style="font-size:2em;color:#be4f0c;margin:0px;padding:0px;padding-left: 4px; padding-right: 2px" class="fas fa-square"><p>JavaScript</p></i>
-                <i style="font-size:2em;color:#FF5A09;padding-right:15px" class="fas fa-square"><p>HTML</p></i>
-                <i style="font-size:2em;color:#ec7f37" class="fas fa-square"><p>CSS</p></i>
-                </div>
-            </div>
-        </div>
-    </div>
+                <div id="language-icon"><i style="color:#393939;font-size:3em" class="fas fa-square"><div id="spacer"><p>Ruby</p></div></i></div>
+                <div id="language-icon"><i style="color:#FF5A09;font-size:3em" class="fas fa-square"><div id="spacer"><p>JavaScript</p></div></i></div>
+                <div id="language-icon"><i style="color:#ec7f37;font-size:3em" class="fas fa-square"><div id="spacer"><p>HTML</p></div></i></div>
+                <div id="language-icon"><i style="font-size:3em;color:#be4f0c;" class="fas fa-square"><div id="spacer"><p>CSS</p></div></i></div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div> 
 </div>   
-</section>
 </div>
+</section>
   </body>
 
 

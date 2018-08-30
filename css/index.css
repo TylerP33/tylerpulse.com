@@ -13,13 +13,22 @@ body {
   max-width: 400px;
 }
 
+@media only screen and (max-width: 768px) {
+  .container-fluid
+  {
+    text-align: center;
+  }
+}
+
 div#nav-bar-wrapper {
   display: none;
-  position: fixed;
   top: 0px;
   width: 100%;
   height: 36px;
-  background-color: #FF5A09; 
+  background-color: #FF5A09;
+  padding-bottom: 5px;
+  padding-top: 5px; 
+  padding-left: 5px; 
 }
 
 
@@ -97,20 +106,14 @@ h3 {
   height: 100%;
 }
 
-@media only screen and (max-width: 768px) {
-  .container-fluid
-  {
-    text-align: center;
-  }
-}
 
 
 #scroll-btn {
   display: flex;
   min-width: 300px;
   flex-direction: column;
-  justify-content: center;
-  text-align: center;
+  justify-content: left;
+  text-align: left;
   position: absolute;
   top:50%;
   left:50%;
@@ -119,32 +122,54 @@ h3 {
   transform: translate(-50%,-50%);
 }
 
-#test {
-    font-color: white;
-    border: solid 2px white;
+#scroll-btn h1 {
+  font-size: 4vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  color: white;
 }
 
+#test {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
 
+#button-container {
+  display: flex;
+  font-color: white;
+  border: solid 2px white;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+  height: 50%;
+}
 
-#test a {
+#button-container:a {
+  color: #FFFFFF;
+}
+
+#button-container:h3 {
   color: #FFFFFF;
   text-decoration: none;
 }
 
 
 
-#test:hover {
+#button-container:hover {
   border: solid 2px #FF5A09;
 }
 
-#test:hover h3 {
+#button-container:hover h3 {
   color: #FF5A09
 }
 
-#test:hover i.fa-arrow-down {
+#button-container:hover i.fa-arrow-down {
  color: #FF5A09
 }
-#test:hover i.fa-arrow-right {
+#button-container:hover i.fa-arrow-right {
  color: #FF5A09
 }
 
@@ -157,6 +182,7 @@ h3 {
   flex-wrap: wrap;
   background-color: white;
   width: 100%;
+  height: 99%;
 }
 
 
@@ -173,6 +199,7 @@ h3 {
   color: #393939;
   width: 100%
 }
+
 
 #about-container h2 {
   font-size: 2em;
@@ -204,8 +231,10 @@ h3 {
 
 #about-container i {
   font-size: 5em;
-  color: #FF5A09;
-  width: 100%
+  color: #393939;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .image-container {
@@ -242,6 +271,7 @@ h3 {
   padding-top: 50px;
   padding-bottom: 50px;
   width: 50%;
+  display: flex-inline;
   justify-content: center;
   text-align: center;
   align-content: flex-start;
@@ -271,18 +301,36 @@ h3 {
 
 #graph-legend-container {
   width: 100%;
+  display: flex;
   flex-wrap: wrap;
 }
 
 #graph-legend-icon {
+  display: flex;
+  flex-direction: row;
   width: 100%;
+  justify-content: center;
+  text-align: center;
 }
 
+#language-icon {
+  display: flex-inline;
+  width: 20%;
+  justify-content: center;
+  text-align: center;
+}
 
-#graph-legend-icon p {
-  font-family: 'Roboto', sans-serif;
-  font-size: 10px;
+#spacer {
   display: flex;
+  flex-direction: wrap;
+  width: 100%;
+}
+#language-icon p {
+  justify-content: center;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  margin: 0;
 }
 
 

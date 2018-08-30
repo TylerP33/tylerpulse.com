@@ -28,14 +28,20 @@ $(window).scroll(function (e) {
 		wH = $(window).height(),
 		wS = $(this).scrollTop();
 	if (wS > (hT+hH-wH)) {
-		$("#nav-bar-wrapper").fadeIn(1000)
+		$("#nav-bar-wrapper").slideDown(500)
 		$("#nav-bar-wrapper").css("display", "flex")
+		$("#nav-bar-wrapper").css("position", "fixed")
+		$(".flex-fa-icon-container i").animate({
+			color: "#FF5A09",
+			backgroundColor: "#393939",
+			width: "50%",
+		}, 4000)
 	} else {
-		$("#nav-bar-wrapper").fadeOut(1000, function() {
-			$("#nav-bar-wrapper").css("display", "none")
-		})
+		$("#nav-bar-wrapper").css("position", "relative")
 	}
 })
+
+
 
 
 // resize screen
@@ -60,10 +66,8 @@ function redraw() {
 
 
 function resizeCanvas() {
-	centerW = window.innerWidth - 250 / 2
-	centerH = window.innerHeight - 75 / 2
-	console.log(centerH)
-	console.log(centerW)
+	centerW = window.innerWidth / 2
+	centerH = window.innerHeight / 2
 	$("#intro-container").css("width", centerW)
 	$("#intro-container").css("height", centerH)
 	canvas.width = window.innerWidth;
@@ -99,7 +103,7 @@ var timerId = setInterval(function() {
 	starCreator(ctx, 2200, 5, 1500, 5, 1.25);
 	starCreator(ctx, 2200, 5, 1500, 5, 1);
 	amount++
-	if (amount === 1000) {
+	if (amount === 500) {
 		clearInterval(timerId);
 	}
 }, 1 * 50)
@@ -107,14 +111,14 @@ var timerId = setInterval(function() {
 // toggle arrow-right => arrow-down
 
 
-$("#test").mouseenter(function(e) {
+$("#button-container").mouseenter(function(e) {
 	$(".fa-arrow-down").toggle("fast");
 	if ($("#scroll-btn").find("i") ) {
 		$(".fa-arrow-right").toggle("fast");
 	}
 })
 
-$("#test").mouseleave(function(e) {
+$("#button-container").mouseleave(function(e) {
 	$(".fa-arrow-down").toggle("fast");
 	if ($("#scroll-btn").find("i") ) {
 		$(".fa-arrow-right").toggle("fast");
@@ -123,7 +127,7 @@ $("#test").mouseleave(function(e) {
 
 // scroll down to about container
 
-$("#test").click(function(e) {
+$("#button-container").click(function(e) {
 	$([document.documentElement, document.body]).animate({
 		scrollTop: $(".about-section").offset().top
 	}, 500); return false;
@@ -274,11 +278,26 @@ function getLanguages() {
 
 getLanguages();
 
+// highlight intro words
+$(".orange").css("color", "#FF5A09")
+
+// move icon on scroll
+
+
+
+
+
+// about page transitions
+
 
 
 
 
 });
+
+
+
+
 	
 
 
