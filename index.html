@@ -23,11 +23,12 @@
 
     <div id="scroll-btn">
       <div id="test">
-      <h1 id="h1-highlight">Hello, my name is <span class="orange">Tyler Pulse</span>.</h1><br/>
+      <div id="tyler-space"><h1 id="h1-highlight">Hello, my name is <span class="orange">Tyler Pulse</span>.</h1>
       <h1>I'm a <span class="orange">full-stack</span> web developer.</h1><br/>
+      </div>
           <div id="button-container">
             <a style="text-decoration: none;" href="#">
-            <h3>View My Page  
+            <h3>View my page 
               <i class="fas fa-arrow-right"></i>
               <i style="display:none" class="fas fa-arrow-down"></i>
             </h3>
@@ -35,7 +36,7 @@
           </div>
         </div>
       </div>
-<section>
+</section>
 
 
 
@@ -43,23 +44,28 @@
 <!-- navigation bar -->
 
   <div id="nav-bar-wrapper">
-    <nav class="nav-bar">
+    <div class="nav-bar">
       <i class="fas fa-bars"></i>
       <i class="fas fa-times" style="display:none"></i>
-      <a style="display:none" class="home" href="#">Home</a>
-      <a class="about" style="display:none" href="#">About</a>
-      <a style="display:none" class="projects" href="/gitprojects">Projects</a>
-    </nav>
-
+      <a style="display:none" class="home" href="#">HOME</a>
+      <a class="about" style="display:none" href="#">ABOUT</a>
+      <a style="display:none" class="projects" href="#">PROJECTS</a>
       <a href="https://github.com/TylerP33"><i class="fab fa-github"></i></a>
       <a href="https://www.linkedin.com/in/tyler-pulse-181405a1"/><i class="fab fa-linkedin-in"></i></a>
-</div>
+    </div>
+  </div>
 
 
 <!-- about -->
 <section class="about-section">
 <div id="about-container">
-  <div id="about-title-container"><h1>About</h1></div>
+  <div  id="about-title-container">
+    <span id="underline">
+    <h1 style="padding-bottom: 10; margin:0;">
+      ABOUT
+      </h1>
+    </span>
+  </div>
   <div class="flex-fa-icon-container">
     <i class="fas fa-fighter-jet"></i>
     <div><h2>Website Speed</h2></div>
@@ -107,22 +113,103 @@
             <p>Requested Data from Github API</p>
           <div id="graph-legend-container">
             <div id="graph-legend-icon">
-                <div id="language-icon"><i style="color:#393939;font-size:3em" class="fas fa-square"><div id="spacer"><p>Ruby</p></div></i></div>
-                <div id="language-icon"><i style="color:#FF5A09;font-size:3em" class="fas fa-square"><div id="spacer"><p>JavaScript</p></div></i></div>
-                <div id="language-icon"><i style="color:#ec7f37;font-size:3em" class="fas fa-square"><div id="spacer"><p>HTML</p></div></i></div>
-                <div id="language-icon"><i style="font-size:3em;color:#be4f0c;" class="fas fa-square"><div id="spacer"><p>CSS</p></div></i></div>
+                <div id="language-icon-one">Ruby</div>
+                <div id="language-icon-two">HTML</div>
+                <div id="language-icon-three">CSS</div>
+                <div id="language-icon-four">JavaScript</div>
                   </div>
               </div>
           </div>
+
+
+    <div class="project-container">
+   
+      <div  id="project-title-container">
+        <span id="projects-underline">
+        <h1 style="padding-bottom: 10; margin:0;">
+          PROJECTS
+        </h1>
+      </span>
+    </div>
+     
+
+  <div id="project-one">
+        <h2>Donate by Necessity</h2>
+        <p>Ruby on Rails</p>
+        <div id="donate_modal" class="modal">
+          
+    <div class="donate_modal_content">
+      <div id="donate_modal_title">
+        <h1 style="text-decoration:underline;">Donate By Necessity</h1>
+              <h2>Project Requirements</h2>
+          <div id="donate_modal_list">
+            <ul>
+              <li>Model had to include a has_many, belongs_to and a has_many :through relationship.</li>
+              <li>Model had to include reasonable validations.</li>
+              <li>Included class level ActiveRecord scope methods.</li>
+              <li>Allowed for standard user authentication, including OmniAuth functionality.</li>
+              <li>All forms were required to correctly display validation errors.</li>
+              <li>And of course, it had to be DRY.</li>
+           </ul>
+        </div>
+        <h2><a href="https://github.com/TylerP33/donate_by_necessity">Github</a></h2>
+        <h2><a href="https://www.youtube.com/watch?v=QrPIdOT_zTg&t=3s">Narrated Tutorial</a></h2>
+        <a><div id="close_button"><span class="close">close</span></div></a>
       </div>
-  </div> 
-</div>   
-</div>
+  </div>
+        </div>
+        <a><div id="donate_btn"><h3>Learn More</h3></div></a>
+       <div class="slide-one">
+          <h2 style="font-size: 3em; color:#be4f0c;">Ruby</h2>
+       </div>
+ </div>
+
+
+
+
+  <div id="project-two">
+        <h2>Freight Tracker</h2>
+        <p>Sinatra</p>
+        <div id="sinatra_modal" class="modal">
+          
+    <div class="sinatra_modal_content">
+      <div id="sinatra_modal_title">
+        <h1 style="text-decoration:underline;">Freight Tracker</h1>
+              <h2>Project Requirements</h2>
+          <div id="sinatra_modal_list">
+            <ul>
+              <li>Model had to include a has_many, belongs_to and a has_many :through relationship.</li>
+              <li>Model had to include reasonable validations.</li>
+              <li>Included class level ActiveRecord scope methods.</li>
+              <li>Allowed for standard user authentication, including OmniAuth functionality.</li>
+              <li>All forms were required to correctly display validation errors.</li>
+              <li>And of course, it had to be DRY.</li>
+           </ul>
+        </div>
+        <h2><a href="https://github.com/TylerP33/freight_tracker">Github</a></h2>
+        <h2><a href="https://www.youtube.com/watch?v=tvJykwOdGRI&t=64s">Narrated Tutorial</a></h2>
+        <a><div id="sinatra_close_button"><span class="sinatra_close">close</span></div></a>
+      </div>
+  </div>
+        </div>
+        <a><div id="sinatra_btn"><h3>Learn More</h3></div></a>
+       <div class="slide-two">
+          <h2 style="font-size: 3em; color:#be4f0c;">Sinatra</h2>
+       </div>
+ </div>
+
+ <div id="project-three">
+          <h2>Sports Today Web Scraper</h2>
+          <p>Object Oriented Ruby</p>
+          <a style="text-decoration:none"href="#"><div id="donate_btn"><h3>Learn More</h3></div></a>
+          <div class="slide-three">
+              <h2 style="font-size: 3em; color:#be4f0c;">Ruby CLI</h2>
+          </div>
+      </div>
+    </div> <!-- image container -->
 </section>
-  </body>
-
-
-
+</div>
+</body>
 </html>
 
 

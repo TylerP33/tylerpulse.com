@@ -21,32 +21,34 @@ body {
 }
 
 div#nav-bar-wrapper {
+  height: 36px;
+}
+
+div.nav-bar {
+  align-items: center;
   display: none;
   top: 0px;
   width: 100%;
   height: 36px;
   background-color: #FF5A09;
-  padding-bottom: 5px;
-  padding-top: 5px; 
-  padding-left: 5px; 
+  border-bottom: solid 3px #393939; 
+  padding-bottom: 6px;
+  padding-top: 5px;
+  padding-left: 5px;
 }
 
-
-
-nav.nav-bar {
-  display: flex;
-  background-color: #393939;
-  border: black solid 1px;
-}
-
-nav.nav-bar a.home, a.projects, a.about {
+div.nav-bar a.home, a.projects, a.about {
   display: flex-inline;
   font-size: 20px;
-  padding: 5px;
+  padding: 10px;
+  opacity: 1;
 }
 
-nav.nav-bar a:hover {
+div.nav-bar a:hover {
   color: white;
+   -webkit-transition:.5s;
+  transition:.5s;
+
 }
 
 
@@ -56,6 +58,8 @@ i.fa-bars:hover,
 i.fa-times:hover
  {
   color: white;
+  -webkit-transition:.5s;
+  transition:.5s;
 }
 
 i.fa-linkedin-in, i.fa-github {
@@ -69,7 +73,7 @@ i.fa-times, i.fa-bars {
   font-size:2em;
   padding-right:5px;
   padding-left:5px;
-  color: #be4f0c
+  color: #393939;
 }
 
 i.fa-arrow-right, i.fa-arrow-down {
@@ -80,7 +84,7 @@ i.fa-arrow-right, i.fa-arrow-down {
 
 
 a.projects, a.about, a.home {
-  color: #be4f0c;
+  color: #393939;
   font-weight: bolder;
   font-family: 'Roboto', sans-serif;
   text-decoration: none;
@@ -111,7 +115,7 @@ h3 {
 #scroll-btn {
   display: flex;
   min-width: 300px;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: left;
   text-align: left;
   position: absolute;
@@ -122,19 +126,26 @@ h3 {
   transform: translate(-50%,-50%);
 }
 
-#scroll-btn h1 {
+#tyler-space h1 {
   font-size: 4vh;
+  width: 100%;
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
   color: white;
 }
 
+#tyler-space{
+  width: 100%;
+}
+
 #test {
   display: flex;
+  width: 100%;
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  align-items: center;
 }
 
 #button-container {
@@ -143,8 +154,8 @@ h3 {
   border: solid 2px white;
   text-align: center;
   justify-content: center;
-  width: 100%;
-  height: 50%;
+  width: 250px;
+  height: 70px;
 }
 
 #button-container:a {
@@ -182,18 +193,23 @@ h3 {
   flex-wrap: wrap;
   background-color: white;
   width: 100%;
-  height: 99%;
+  height: 99.5%;
 }
 
 
 #about-title-container {
   width: 100%;
+  padding-top: 70px;
+  padding-bottom: 50px;
   display: flex;
   justify-content: center;
-  text-align: center ;
+  text-align: center;
+  overflow: hidden;
+  
 }
 
 #about-title-container h1 {
+  flex: 1;
   font-size: 3em;
   font-family: 'Roboto', sans-serif;
   color: #393939;
@@ -220,8 +236,7 @@ h3 {
   padding-top: 50px;
   padding-bottom: 50px;
   min-width: 300px;
-  display: flex-inline;
-  width: 18%;
+  flex: 1;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: center;
@@ -238,13 +253,14 @@ h3 {
 }
 
 .image-container {
-  min-width: 150px;
+  min-width: 300px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   text-align: center;
   flex-wrap: wrap;
   width: 100%;
+  height: 100%;
 }
 
 
@@ -252,8 +268,8 @@ h3 {
   padding-top: 50px;
   padding-bottom: 50px;
   min-width: 300px;
-  display: flex-inline;
-  width: 50%;
+  flex: 1;
+  width: 25%;
   flex-wrap: wrap;
   justify-content: center;
   text-align: center;
@@ -270,11 +286,10 @@ h3 {
 .graph-img-container {
   padding-top: 50px;
   padding-bottom: 50px;
-  width: 50%;
-  display: flex-inline;
+  width: 25%;
+  flex: 1;
   justify-content: center;
   text-align: center;
-  align-content: flex-start;
 }
 
 .graph-img-container h2 {
@@ -302,38 +317,468 @@ h3 {
 #graph-legend-container {
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  justify-content: center;
 }
 
 #graph-legend-icon {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   width: 100%;
+  height: 20%;
   justify-content: center;
   text-align: center;
+  margin: 0px;
+  padding: 0px;
 }
 
-#language-icon {
-  display: flex-inline;
-  width: 20%;
-  justify-content: center;
-  text-align: center;
-}
-
-#spacer {
+#language-icon-one {
+  background-color:#393939;
   display: flex;
-  flex-direction: wrap;
-  width: 100%;
-}
-#language-icon p {
   justify-content: center;
   text-align: center;
+  align-items: center;
+  width: 100%;
+  color: white;
   font-family: 'Roboto', sans-serif;
-  font-size: 15px;
+}
+
+#language-icon-two {
+  background-color:#FF5A09;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+#language-icon-three {
+  background-color:#ec7f37;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+#language-icon-four {
+  font-color: #393939;
+  background-color:#be4f0c;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+/*project start section */
+
+.project-container{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  min-width: 300px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(57, 57, 57, 0.75);
+}
+
+
+#project-one {
+  display: flex;
+  min-width: 300px;
+  position: relative;
+  flex-direction: column;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 33%;
+  height: 50%;
+  border: solid 2px white;
+}
+
+
+#project-two {
+  display: flex;
+  min-width: 300px;
+  position: relative;
+  flex-direction: column;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 33%;
+  height: 50%;
+  border: solid 2px #393939;
+  border: solid 2px white;
+}
+
+#project-three {
+  display: flex;
+  min-width: 300px;
+  position: relative;
+  flex-direction: column;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 33%;
+  height: 50%;
+  border: solid 2px #393939;
+  border: solid 2px white;
+}
+
+.project-container h1 {
+  color: #393939;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 3em;
+}
+/* Dark Grey: #393939 Deep Orange: #FF5A09 Light Orange: #ec7f37 Orange Yellow: #be4f0c */
+
+.slide-one {
+  position: absolute;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #393939;
+}
+
+.slide-two {
+  display: flex;
+  position: absolute;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #393939;
+}
+
+.slide-three {
+  display: flex;
+  position: absolute;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #393939;
+}
+
+
+#underline {
+  border-bottom: 3px solid black;
+}
+
+#projects-underline {
+  border-bottom: 3px solid #393939;
+}
+
+#project-title-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  padding-bottom: 50px;
+}
+
+#project-one p {
+  padding-bottom: 100px;
+  color: white;
+  font-weight: bolder;
+  font-family: 'Roboto', sans-serif;
+}
+#project-two p {
+  padding-bottom: 100px;
+  color: white;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+}
+#project-three p {
+  padding-bottom: 100px;
+  color: white;
+  font-weight: bolder;
+  font-family: 'Roboto', sans-serif;
+}
+
+#donate_btn {
+  border: white solid 2px;
+  text-align: center;
+  flex: 1 0;
+  justify-content: center;
+  padding: 20px;
+  -webkit-transition:.2s;
+  /* ...and now for the proper property */
+  transition:.2s;
+}
+
+#sinatra_btn {
+  border: white solid 2px;
+  text-align: center;
+  flex: 1 0;
+  justify-content: center;
+  padding: 20px;
+  -webkit-transition:.2s;
+  /* ...and now for the proper property */
+  transition:.2s;
+}
+
+#donate_btn h3 {
+  padding: 10px;
+  margin: 0px;
+   -webkit-transition:.2s;
+  /* ...and now for the proper property */
+  transition:.2s;
+}
+
+#sinatra_btn h3 {
+  padding: 10px;
+  margin: 0px;
+   -webkit-transition:.2s;
+  /* ...and now for the proper property */
+  transition:.2s;
+}
+
+#donate_btn:hover {
+  border: 2px solid #393939;
+  -webkit-transition:.2s;
+  color: #393939;
+  /* ...and now for the proper property */
+  transition:.2s;
+}
+
+#sinatra_btn:hover {
+  border: 2px solid #393939;
+  -webkit-transition:.2s;
+  color: #393939;
+  /* ...and now for the proper property */
+  transition:.2s;
+}
+
+#donate_btn:hover h3 {
+  color: #393939;
+  -webkit-transition:.2s;
+  /* ...and now for the proper property */
+  transition:.2s;
+}
+
+#sinatra_btn:hover h3 {
+  color: #393939;
+  -webkit-transition:.2s;
+  /* ...and now for the proper property */
+  transition:.2s;
+}
+
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+}
+
+/* Modal Content/Box */
+.donate_modal_content {
+    display: flex;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    font-family: 'Roboto', sans-serif;
+    background-color: white;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 2px solid #393939;
+}
+
+.sinatra_modal_content {
+    display: flex;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    font-family: 'Roboto', sans-serif;
+    background-color: white;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 2px solid #393939;
+}
+
+
+}
+
+#donate_modal_title {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+#sinatra_modal_title {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+#donate_modal_list {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+}
+
+#sinatra_modal_list {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+}
+
+#donate_modal_list li {
+  justify-content: left;
+  list-style-type: none;
+  padding-bottom: 10px;
+}
+
+#sinatra_modal_list li {
+  justify-content: left;
+  list-style-type: none;
+  padding-bottom: 10px;
+}
+
+#donate_modal_list ul {
+  justify-content: left;
+  list-style-type: none;
+  padding: 0;
   margin: 0;
 }
 
+#sinatra_modal_list ul {
+  justify-content: left;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.donate_modal_content h1 {
+  width: 100%;
+  color: #393939;
+}
+
+.sinatra_modal_content h1 {
+  width: 100%;
+  color: #393939;
+}
+
+.donate_modal_content a {
+  width: 100%;
+  color: #393939;
+}
+
+.sinatra_modal_content a {
+  width: 100%;
+  color: #393939;
+}
+
+.donate_modal_content a:hover {
+  color: #FF5A09;
+  -webkit-transition:.5s;
+  transition:.5s;
+}
+
+.sinatra_modal_content a:hover {
+  color: #FF5A09;
+  -webkit-transition:.5s;
+  transition:.5s;
+}
+/* The Close Button */
+.close {
+    width: 100%;
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #FF5A09;
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-transition:.5s;
+    transition:.5s;
+}
+
+#close_button {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border: solid 2px white;
+  background-color: #393939;
+  -webkit-transition:.5s;
+    transition:.5s;
+}
+
+#close_button:hover {
+  border: solid 2px #FF5A09;
+  background-color: #393939;
+  -webkit-transition:.5s;
+    transition:.5s;
+}
+
+.sinatra_close {
+    width: 100%;
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.sinatra_close:hover,
+.sinatra_close:focus {
+    color: #FF5A09;
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-transition:.5s;
+    transition:.5s;
+}
+
+#sinatra_close_button {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border: solid 2px white;
+  background-color: #393939;
+  -webkit-transition:.5s;
+    transition:.5s;
+}
+
+#sinatra_close_button:hover {
+  border: solid 2px #FF5A09;
+  background-color: #393939;
+  -webkit-transition:.5s;
+    t
 
 
-
-/* Dark Grey: #393939 Deep Orange: #FF5A09 Light Orange: #ec7f37 Orange Yellow: #be4f0c

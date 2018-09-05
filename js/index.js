@@ -21,26 +21,62 @@ $("#nav-bar-wrapper").click(function() {
 
 // navbar is fixed at a certain scroll limit
 
+$(window).on("scroll", function() {
+  aboutPage();
+  projectPage();
+});
 
-$(window).scroll(function (e) {
-	var hT = $("#about-container").offset().top,
+
+function aboutPage() {
+	var	hT = $("#about-container").offset().top,
 		hH = $("#about-container").outerHeight(),
 		wH = $(window).height(),
 		wS = $(this).scrollTop();
 	if (wS > (hT+hH-wH)) {
-		$("#nav-bar-wrapper").slideDown(500)
-		$("#nav-bar-wrapper").css("display", "flex")
-		$("#nav-bar-wrapper").css("position", "fixed")
+		$(".nav-bar").slideDown(2000)
+		$(".nav-bar").css("display", "flex")
+		$(".nav-bar").css("position", "fixed")
 		$(".flex-fa-icon-container i").animate({
 			color: "#FF5A09",
 			backgroundColor: "#393939",
-			width: "50%",
-		}, 4000)
-	} else {
-		$("#nav-bar-wrapper").css("position", "relative")
-	}
-})
+			width: "90%",
+		}, 3000)
+		$("#language-icon-one").animate({
+			width: "120px",
+			height: "50px"
+		}, 3000)
+		$("#language-icon-two").animate({
+			width: "120px",
+			height: "50px"
+		}, 3000)
+		$("#language-icon-three").animate({
+			width: "120px",
+			height: "50px"
+		}, 3000)
+		$("#language-icon-four").animate({
+			width: "120px",
+			height: "50px"
+		}, 3000)
 
+		$("p").animate({
+			fontWeight: "1200"
+		}, 3000)
+	} else {
+		$(".nav-bar").css("position", "relative")
+	}
+}
+
+// project page
+
+function projectPage() {
+	var hT = $(".project-container").offset().top,
+		hH = $(".project-container").outerHeight(),
+		wH = $(window).height(),
+		wS = $(this).scrollTop();
+	if (wS > (hT+hH-wH)) { 
+
+	}
+}
 
 
 
@@ -66,10 +102,6 @@ function redraw() {
 
 
 function resizeCanvas() {
-	centerW = window.innerWidth / 2
-	centerH = window.innerHeight / 2
-	$("#intro-container").css("width", centerW)
-	$("#intro-container").css("height", centerH)
 	canvas.width = window.innerWidth;
 	canvas.height = window.innerHeight;
 	redraw();
@@ -147,6 +179,12 @@ $(".home").click(function(e) {
 $(".about").click(function(e) {
 	$([document.documentElement, document.body]).animate({
 		scrollTop: $(".about-section").offset().top
+	}, 500); return false;
+});
+
+$(".projects").click(function(e) {
+	$([document.documentElement, document.body]).animate({
+		scrollTop: $(".project-container").offset().top
 	}, 500); return false;
 });
 
@@ -279,17 +317,76 @@ function getLanguages() {
 getLanguages();
 
 // highlight intro words
+
 $(".orange").css("color", "#FF5A09")
 
-// move icon on scroll
+// project page
+
+$(".slide-one").mouseenter(function() {
+	$(this).fadeOut(250)
+})
+
+$("#project-one").mouseleave(function() {
+	$(".slide-one").fadeIn(250)
+})
+
+$(".slide-two").mouseenter(function() {
+	$(this).fadeOut(250)
+})
+
+$("#project-two").mouseleave(function() {
+	$(".slide-two").fadeIn(250)
+})
+
+
+$(".slide-three").mouseenter(function() {
+	$(this).fadeOut(250)
+})
+
+$("#project-three").mouseleave(function() {
+	$(".slide-three").fadeIn(250)
+})
+
+
+// project pop-up div - donate
 
 
 
+// When the user clicks on the button, open the modal 
+$("#donate_btn").click(function() {
+    $("#donate_modal").css("display", "block")
+});
 
 
-// about page transitions
+// When the user clicks on <span> (x), close the modal
+$(".close").click(function() {
+    $("#donate_modal").css("display", "none")
+});
+
+// When the user clicks anywhere outside of the modal, close it
+$(window).click(function(event) {
+    if (event.target == $("#donate_modal")) {
+        $("#donate_modal").css("display", "none");
+    }
+});
 
 
+$("#sinatra_btn").click(function() {
+    $("#sinatra_modal").css("display", "block")
+});
+
+
+// When the user clicks on <span> (x), close the modal
+$(".sinatra_close").click(function() {
+    $("#sinatra_modal").css("display", "none")
+});
+
+// When the user clicks anywhere outside of the modal, close it
+$(window).click(function(event) {
+    if (event.target == $("#sinatra_modal")) {
+        $("#sinatra_modal").css("display", "none");
+    }
+});
 
 
 
