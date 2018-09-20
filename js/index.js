@@ -7,25 +7,22 @@ $("#nav-bar-wrapper").click(function() {
 	$(".about").toggle("slow");
 	$(".home").toggle("slow");
 	$(".projects").toggle("slow");
+	$(".contacts").toggle("slow");
 	if ($("#nav-bar-wrapper").find("i") ) {
 		$(".fa-bars").toggle("slow");
 	}
 });
 
-	$(".fa-linkedin-in").click(function(e) {
-		e.stopPropagation();
-	})
-	$(".fa-github").click(function(e) {
-		e.stopPropagation();
-	})
-
 // navbar is fixed at a certain scroll limit
+
+
+(function(l){var i,s={touchend:function(){}};for(i in s)l.addEventListener(i,s)})(document); // sticky hover fix in iOS
+
 
 $(window).on("scroll", function() {
   aboutPage();
   projectPage();
 });
-
 
 function aboutPage() {
 	var	hT = $("#about-container").offset().top,
@@ -34,32 +31,21 @@ function aboutPage() {
 		wS = $(this).scrollTop();
 	if (wS > (hT+hH-wH)) {
 		$(".nav-bar").slideDown(2000)
+		$("#about-title-container").show("slide", { direction: "left" }, 1000);
+		$(".flex-fa-icon-container").show("slide", { direction: "left" }, 1000);
+		$(".my-img-container").show("slide", { direction: "left" }, 1000);
+		$("#graph-legend-icon").show("slide", { direction: "left" }, 1000);
 		$(".nav-bar").css("display", "flex")
 		$(".nav-bar").css("position", "fixed")
+		$(".nav-bar").css("border-bottom", "solid 4px #393939")
+		$(".nav-bar").css("background-color", "#FF5A09")
+		$(".nav-bar a").css("background-color", "#FF5A09")
+		$(".nav-bar a").css("color", "#393939")
+		$(".nav-bar i").css("color", "#393939")
 		$(".flex-fa-icon-container i").animate({
 			color: "#FF5A09",
 			backgroundColor: "#393939",
 			width: "90%",
-		}, 3000)
-		$("#language-icon-one").animate({
-			width: "120px",
-			height: "50px"
-		}, 3000)
-		$("#language-icon-two").animate({
-			width: "120px",
-			height: "50px"
-		}, 3000)
-		$("#language-icon-three").animate({
-			width: "120px",
-			height: "50px"
-		}, 3000)
-		$("#language-icon-four").animate({
-			width: "120px",
-			height: "50px"
-		}, 3000)
-
-		$("p").animate({
-			fontWeight: "1200"
 		}, 3000)
 	} else {
 		$(".nav-bar").css("position", "relative")
@@ -69,14 +55,31 @@ function aboutPage() {
 // project page
 
 function projectPage() {
-	var hT = $(".project-container").offset().top,
-		hH = $(".project-container").outerHeight(),
+	var hT = $("#project-one").offset().top
+		hH = $("#project-one").outerHeight(),
 		wH = $(window).height(),
 		wS = $(this).scrollTop();
+		console.log(wH)
+	if (wS > (hT+hH-wH)) { 
+		$(".nav-bar").css("background-color", "#393939")
+		$(".nav-bar").css("border-bottom", "solid 4px #FF5A09")
+		$(".nav-bar a").css("color", "#FF5A09")
+		$(".nav-bar a").css("background-color", "#393939")
+		$(".nav-bar i").css("color", "#FF5A09")
+	}
+}
+
+function contactForm() {
+	var hT = $(".contact-container").offset().top
+		hH = $(".contact-container").outerHeight(),
+		wH = $(window).height(),
+		wS = $(this).scrollTop();
+		console.log(wH)
 	if (wS > (hT+hH-wH)) { 
 
 	}
 }
+
 
 
 
@@ -185,6 +188,12 @@ $(".about").click(function(e) {
 $(".projects").click(function(e) {
 	$([document.documentElement, document.body]).animate({
 		scrollTop: $(".project-container").offset().top
+	}, 500); return false;
+});
+
+$(".contacts").click(function(e) {
+	$([document.documentElement, document.body]).animate({
+		scrollTop: $(".contact-container").offset().top
 	}, 500); return false;
 });
 
@@ -307,11 +316,7 @@ function getLanguages() {
     	}
 	);
 	myPiechart.draw();
-
-
-
-
-  })
+	})
 }
 
 getLanguages();
@@ -322,75 +327,49 @@ $(".orange").css("color", "#FF5A09")
 
 // project page
 
-$(".slide-one").mouseenter(function() {
-	$(this).fadeOut(250)
-})
 
-$("#project-one").mouseleave(function() {
-	$(".slide-one").fadeIn(250)
-})
+function uncoverProjectSlide(slide, project) {
+	slide.mouseenter(function() {
+		$(this).fadeOut(250)
+	})
 
-$(".slide-two").mouseenter(function() {
-	$(this).fadeOut(250)
-})
+	project.mouseleave(function() {
+		slide.fadeIn(250)
+		slide.css("border", "solid 2px #FF5A09")
+	})
+}
 
-$("#project-two").mouseleave(function() {
-	$(".slide-two").fadeIn(250)
-})
-
-
-$(".slide-three").mouseenter(function() {
-	$(this).fadeOut(250)
-})
-
-$("#project-three").mouseleave(function() {
-	$(".slide-three").fadeIn(250)
-})
-
+uncoverProjectSlide($(".slide-one"), $("#project-one") )
+uncoverProjectSlide($(".slide-two"), $("#project-two") )
+uncoverProjectSlide($(".slide-three"), $("#project-three") )
 
 // project pop-up div - donate
 
+function modal(modal, btn, close){
+	btn.click(function() {
+    	modal.fadeIn(500)
+	});
+
+    close.click(function() {
+    	modal.fadeOut(500)
+	});
+
+    $(window).click(function(event) {
+    if (event.target == modal) {
+        modal.css("display", "none");
+    	}
+	});
+}
 
 
-// When the user clicks on the button, open the modal 
-$("#donate_btn").click(function() {
-    $("#donate_modal").css("display", "block")
-});
-
-
-// When the user clicks on <span> (x), close the modal
-$(".close").click(function() {
-    $("#donate_modal").css("display", "none")
-});
-
-// When the user clicks anywhere outside of the modal, close it
-$(window).click(function(event) {
-    if (event.target == $("#donate_modal")) {
-        $("#donate_modal").css("display", "none");
-    }
-});
-
-
-$("#sinatra_btn").click(function() {
-    $("#sinatra_modal").css("display", "block")
-});
-
-
-// When the user clicks on <span> (x), close the modal
-$(".sinatra_close").click(function() {
-    $("#sinatra_modal").css("display", "none")
-});
-
-// When the user clicks anywhere outside of the modal, close it
-$(window).click(function(event) {
-    if (event.target == $("#sinatra_modal")) {
-        $("#sinatra_modal").css("display", "none");
-    }
-});
-
+modal($("#cli_modal"), $("#cli_btn"), $(".cli_close"));
+modal($("#sinatra_modal"), $("#sinatra_btn"), $(".sinatra_close"));
+modal($("#donate_modal"), $("#donate_btn"), $(".close"));
 
 
 });
+
+
 
 
 

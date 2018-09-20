@@ -6,12 +6,9 @@
     <link href='http://fonts.googleapis.com/css?family=Arizonia' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="js/index.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/index.css">
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+      <link rel="stylesheet" type="text/css" href="css/index.css">
  </head>
-  <title>Fun Page</title>
+  <title>Tyler's Workshop</title>
 
   <body>
 
@@ -19,15 +16,15 @@
 <div class="container">
 <section class="canvas">
       <canvas id="first-canvas" style="position:relative; left: 0px; top: 0px;"></canvas>
-      <a href="#"></a>
+      <a href="#/"></a>
 
     <div id="scroll-btn">
-      <div id="test">
+      <div id="btn-wrapper">
       <div id="tyler-space"><h1 id="h1-highlight">Hello, my name is <span class="orange">Tyler Pulse</span>.</h1>
       <h1>I'm a <span class="orange">full-stack</span> web developer.</h1><br/>
       </div>
           <div id="button-container">
-            <a style="text-decoration: none;" href="#">
+            <a style="text-decoration: none;" href="#/">
             <h3>View my page 
               <i class="fas fa-arrow-right"></i>
               <i style="display:none" class="fas fa-arrow-down"></i>
@@ -50,8 +47,7 @@
       <a style="display:none" class="home" href="#">HOME</a>
       <a class="about" style="display:none" href="#">ABOUT</a>
       <a style="display:none" class="projects" href="#">PROJECTS</a>
-      <a href="https://github.com/TylerP33"><i class="fab fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/tyler-pulse-181405a1"/><i class="fab fa-linkedin-in"></i></a>
+      <a style="display:none" class="contacts" href="#">CONTACTS</a>
     </div>
   </div>
 
@@ -59,52 +55,66 @@
 <!-- about -->
 <section class="about-section">
 <div id="about-container">
-  <div  id="about-title-container">
+  <div style="display:none" id="about-title-container">
     <span id="underline">
     <h1 style="padding-bottom: 10; margin:0;">
       ABOUT
       </h1>
     </span>
   </div>
-  <div class="flex-fa-icon-container">
-    <i class="fas fa-fighter-jet"></i>
-    <div><h2>Website Speed</h2></div>
-    <div>
-    <p>Quick loadtimes and reduced lag is always</p>
-    <p>a priority. Every website must be fast.</p>
+  <div style="display:none" class="flex-fa-icon-container">
+    <i style="padding-bottom: 20px" class="fas fa-fighter-jet"></i>
+    <div><h2>Fast</h2></div>
+    <div style="width: 100%;display: flex;text-align:center; justify-content: center; align-items: center">
+    <div style="width: 50%; margin: 5px;">
+    <p>Quick loadtimes and reduced lag is always a priority. My aim is make sure everything is fast.</p>
+  </div>
+</div>
+  </div>
+  <div style="display:none" class="flex-fa-icon-container">
+    <i style="padding-bottom: 20px" class="fas fa-lock"></i>
+    <div><h2>Secure</h2></div>
+    <div style="width: 100%;display: flex;text-align:center; justify-content: center; align-items: center">
+    <div style="width: 50%; margin: 5px;">
+    <p>User security and trust is pivotal. A user should never have to worry about their data.</p>
   </div>
   </div>
-  <div class="flex-fa-icon-container">
-    <i class="fas fa-lock"></i>
-    <div><h2>User Security</h2></div>
-    <div>
-    <p>User security and trust is pivotal.</p>
-    <p>All data will be accounted for.</p>
   </div>
+  <div style="display:none" class="flex-fa-icon-container">
+    <i style="padding-bottom: 20px" class="fas fa-lightbulb"></i>
+    <div><h2>Responsive</h2></div>
+     <div style="width: 100%;display: flex;text-align:center; justify-content: center; align-items: center">
+    <div style="width: 50%; margin: 5px;">
+    <p>I strive for intuitive and clean interfaces to best fit your needs. Silky smooth interaction makes a website.</p>
   </div>
-  <div class="flex-fa-icon-container">
-    <i class="fas fa-lightbulb"></i>
-    <div><h2>Intuitive Design</h2></div>
-    <div>
-    <p>I strive for intuitive and clean</p><p> interfaces to best fit your needs.</p>
+</div>
   </div>
+  <div style="display:none" class="flex-fa-icon-container">
+    <i style="padding-bottom: 20px" class="fas fa-cog"></i>
+    <div><h2>Precise</h2></div>
+    <div style="width: 100%;display: flex;text-align:center; justify-content: center; align-items: center">
+    <div style="width: 50%; margin: 5px;"><p>Building to spec keeps customers happy.Every website is created with that intention.</p></div>
   </div>
-  <div class="flex-fa-icon-container">
-    <i class="fas fa-cog"></i>
-    <div><h2>Correct Builds</h2></div>
-    <div><p>Building to spec keeps customers happy.</p><p>Every website is created with that intention.</p></div>
   </div>
 
 
 
 <div class="image-container">
-    <div class="my-img-container">
-      <img src="img/test.png"/>
-      <div><h2>Hi, it's me.</h2></div>
-      <p>I'm an aspiring Full-Stack Developer</p>
-      <p>and I love everything web. From front end work,</p>
-      <p>all the way down to building schema tables, the process is enjoyable.</p>
-      <p>It's all fascinating, and I hope it shows in my work.</p>
+    <div style="display:none" class="my-img-container">
+      <img style="padding-bottom: 20px" id="my_img" src="img/test.png"/>
+      <div><h2 style="padding-bottom: 20px">Hi, it's me.</h2></div>
+    <div style="width: 100%;display: flex;text-align:center; justify-content: center; align-items: center">
+      <div id="about_p_width" margin: 5px;">
+      <p>I'm a Full-Stack Developer
+      and I love everything web. From front end work,
+      all the way down to building schema tables, the process is enjoyable.
+      This industry requires constant learning, and it is as
+      dynamic as ever. I'm honored to be apart of it.
+      This website is built from scratch, and it was a great
+      learning experience.  I hope you enjoy it!
+    </p>
+  </div>
+      </div>
     </div>
 
     <div class="graph-img-container">
@@ -112,7 +122,7 @@
             <h2>Designated Github Repo Language</h2>
             <p>Requested Data from Github API</p>
           <div id="graph-legend-container">
-            <div id="graph-legend-icon">
+            <div style="display:none" id="graph-legend-icon">
                 <div id="language-icon-one">Ruby</div>
                 <div id="language-icon-two">HTML</div>
                 <div id="language-icon-three">CSS</div>
@@ -121,29 +131,40 @@
               </div>
           </div>
 
-
     <div class="project-container">
-   
-      <div  id="project-title-container">
+      <div id="project-title-container">
         <span id="projects-underline">
         <h1 style="padding-bottom: 10; margin:0;">
-          PROJECTS
+          BACK END PROJECTS
         </h1>
       </span>
     </div>
      
 
   <div id="project-one">
-        <h2>Donate by Necessity</h2>
-        <p>Ruby on Rails</p>
+    <div class="project-label-title">
+        <h2 style="color: #FF5A09;">Donate by Necessity</h2>
+        <h3 class="project_h3_color">Ruby on Rails</h3>
+    </div>
         <div id="donate_modal" class="modal">
           
     <div class="donate_modal_content">
       <div id="donate_modal_title">
-        <h1 style="text-decoration:underline;">Donate By Necessity</h1>
-              <h2>Project Requirements</h2>
-          <div id="donate_modal_list">
-            <ul>
+         <img style="border: solid black 10px; width: 75%; height: auto;" src="img/donate_by_necessity.gif">
+        <h1 style="padding-top: 40px;border-top: black solid 2px;text-decoration:underline;">Donate By Necessity</h1>
+            <h2 style="padding-bottom: 40px; color:#FF5A09;">Application Description</h2>
+            <div style="padding-bottom: 40px;" id="donate_modal_list">
+            <ul style="color: #393939;opacity: 0.75;">
+              <li>A real time tracking donation platform that helps maximize every dollar.</li>
+              <li>Contains a donor interface where a user can manage their their individual donations.</li>
+              <li>The ability to add a recipient to the system, or donate to an exisitng recipient added by another user.</li>
+              <li>Donations are maximized by allowing the donor to be very specific with where they want to donate their money.</li>
+              <li>Real time tracking allows for a plethora of metrics to enhance the user experience.</li>
+           </ul>
+        </div>
+              <h2 style="padding-bottom: 40px; color:#FF5A09;">Project Requirements</h2>
+          <div style="padding-bottom: 40px" id="donate_modal_list">
+            <ul style="color: #393939;opacity: 0.75;">
               <li>Model had to include a has_many, belongs_to and a has_many :through relationship.</li>
               <li>Model had to include reasonable validations.</li>
               <li>Included class level ActiveRecord scope methods.</li>
@@ -152,65 +173,170 @@
               <li>And of course, it had to be DRY.</li>
            </ul>
         </div>
-        <h2><a href="https://github.com/TylerP33/donate_by_necessity">Github</a></h2>
+        <h2><a href="https://github.com/TylerP33/donate_by_necessity">Read Code</a></h2>
         <h2><a href="https://www.youtube.com/watch?v=QrPIdOT_zTg&t=3s">Narrated Tutorial</a></h2>
         <a><div id="close_button"><span class="close">close</span></div></a>
       </div>
   </div>
         </div>
         <a><div id="donate_btn"><h3>Learn More</h3></div></a>
-       <div class="slide-one">
-          <h2 style="font-size: 3em; color:#be4f0c;">Ruby</h2>
-       </div>
+       <!--<div class="slide-one">
+          <h2 style="font-size: 3em; color:#FF5A09">Ruby on Rails</h2>
+       </div> -->
  </div>
 
-
+<div style="display: flex; width: 100%; padding-bottom: 50px"><p></p></div>
 
 
   <div id="project-two">
-        <h2>Freight Tracker</h2>
-        <p>Sinatra</p>
+    <div class="project-label-title">
+        <h2 style="color: #FF5A09;">Freight Tracker</h2>
+        <h3>Sintra Framework - MVC Pattern</h3>
+    </div>
         <div id="sinatra_modal" class="modal">
-          
     <div class="sinatra_modal_content">
       <div id="sinatra_modal_title">
-        <h1 style="text-decoration:underline;">Freight Tracker</h1>
-              <h2>Project Requirements</h2>
-          <div id="sinatra_modal_list">
-            <ul>
-              <li>Model had to include a has_many, belongs_to and a has_many :through relationship.</li>
-              <li>Model had to include reasonable validations.</li>
-              <li>Included class level ActiveRecord scope methods.</li>
-              <li>Allowed for standard user authentication, including OmniAuth functionality.</li>
-              <li>All forms were required to correctly display validation errors.</li>
-              <li>And of course, it had to be DRY.</li>
+        <img style="border: solid black 10px;width: 75%; height: auto;" src="img/freight_tracker.gif">
+        <h1 style="text-decoration:underline; padding-top: 40px; border-top: black solid 2px;">Freight Tracker</h1>
+                 <h2 style="padding-bottom: 40px;color:#FF5A09;">Application Description</h2>
+          <div style="padding-bottom: 40px;" id="sinatra_modal_list">
+            <ul style="color: #393939;opacity: 0.75;">
+              <li>A simple freight tracking app that shows good use of RESTful API.</li>
+              <li>Contains a UI that allows for simple tracking of specific freight, with the ability to add an associated shipping route.</li>
+              <li>It allows the user to stategically place in freight information when necessary, and then gives them the ability to retroactively add in a route at any given time.</li>
            </ul>
         </div>
-        <h2><a href="https://github.com/TylerP33/freight_tracker">Github</a></h2>
+              <h2 style="padding-bottom: 40px;color:#FF5A09;">Project Requirements</h2>
+          <div style="padding-bottom: 40px;" id="sinatra_modal_list">
+            <ul style="color: #393939;opacity: 0.75;">
+              <li>Model had to include ActiveRecord for database mapping.</li>
+              <li>A has_many relationship, and a belongs_to relationship were required on at least two models.</li>
+              <li>User login capability with exclusive user priveleges was necessary for completion.</li>
+              <li>Display of CRUD functionality with the database.</li>
+           </ul>
+        </div>
+        <h2><a href="https://github.com/TylerP33/freight_tracker">Read Code</a></h2>
         <h2><a href="https://www.youtube.com/watch?v=tvJykwOdGRI&t=64s">Narrated Tutorial</a></h2>
         <a><div id="sinatra_close_button"><span class="sinatra_close">close</span></div></a>
       </div>
   </div>
         </div>
         <a><div id="sinatra_btn"><h3>Learn More</h3></div></a>
-       <div class="slide-two">
-          <h2 style="font-size: 3em; color:#be4f0c;">Sinatra</h2>
-       </div>
+       <!--<div class="slide-two">
+          <h2 style="font-size: 3em; color:#FF5A09;">Sinatra</h2>
+       </div> -->
  </div>
 
- <div id="project-three">
-          <h2>Sports Today Web Scraper</h2>
-          <p>Object Oriented Ruby</p>
-          <a style="text-decoration:none"href="#"><div id="donate_btn"><h3>Learn More</h3></div></a>
-          <div class="slide-three">
-              <h2 style="font-size: 3em; color:#be4f0c;">Ruby CLI</h2>
-          </div>
+<div style="display: flex; width: 100%; padding-bottom: 50px"><p></p></div>
+
+
+   <div id="project-three">
+    <div class="project-label-title">
+        <h2 style="color: #FF5A09;">TVGuide.com Web Scraper</h2>
+        <h3>Object Oriented Ruby - Ruby Gem</h3>
+    </div>
+        <div id="cli_modal" class="modal">
+          
+    <div class="cli_modal_content">
+      <div id="cli_modal_title">
+        <img style="border: solid black 10px;width: 75%; height: auto;" src="img/sports_today.gif">
+        <h1 style="text-decoration:underline; padding-top: 40px; border-top: black solid 2px;">Web Scraper</h1>
+                    <h2 style="padding-bottom: 40px;color:#FF5A09;">Application Description</h2>
+           <div style="padding-bottom: 40px;" id="cli_modal_list">
+            <ul style="color: #393939;opacity: 0.75;">
+              <li>A simple web scraper that gives the user a nifty way to check what sports are playing that day.</li>
+              <li>It's an efficient, lightweight Ruby gem that any sports fan would enjoy.</li>
+              <li>The CLI interface gives 10 sports categories to choose from, and is constantly updated everyday via the data from www.tvguide.com.</li>
+           </ul>
+        </div>
+              <h2 style="padding-bottom: 40px;color:#FF5A09;">Project Requirements</h2>
+          <div style="padding-bottom: 40px;" id="cli_modal_list">
+           <ul style="color: #393939;opacity: 0.75;">
+              <li>Had to include a CLI.</li>
+              <li>Model had to include access to data from a web page.</li>
+              <li>Data had to go at least one level deep.  "Level", being a user can make a choice and then get more information from that choice.</li>
+              <li>Had to use good OO design patterns.</li>
+              <li>Instead of using a collection of hashes to store a data, we were required to use a collection of objects.</li>
+           </ul>
+        </div>
+        <h2><a href="https://github.com/TylerP33/sports_today">Read Code</a></h2>
+        <h2><a href="https://www.youtube.com/watch?v=_wzpP9zho20&t=4s">Narrated Tutorial</a></h2>
+        <a><div id="cli_close_button"><span class="cli_close">close</span></div></a>
       </div>
-    </div> <!-- image container -->
+  </div>
+        </div>
+        <a><div id="cli_btn"><h3>Learn More</h3></div></a>
+      <!-- <div class="slide-three">
+          <h2 style="font-size: 3em; color:#FF5A09">Ruby Web Scraper</h2>
+       </div> -->
+ </div>
+
+
+</div>
+
+
+  <div class="contact-container">
+    <svg preserveAspectRatio="none" viewBox="0 0 100 102" height="200" width="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" class="svgcolor-light">
+      <path d="M0 0 L50 100 L100 0 Z" fill="white" stroke="white"></path>
+    </svg>
+      <div  id="contact-title-container">
+        <span style="border-bottom: solid white 2px;" id="image_und">
+        <h1>
+          CONTACT
+        </h1>
+        </span>
+      </div>
+        <p style="padding-bottom: 25px; color:white">Have a question or a job inquiry?</p>
+      <div id="contact-form" action="index.php">
+      <form method="POST">
+        <input placeholder="Name" name="name" class="text-box">
+        <br></br>
+        <input placeholder="Email" class="text-box" name="email" type="email">
+        <br></br>
+        <textarea name="message" placeholder="Your Message" class="text-box"></textarea>
+        <br></br>
+        <input id="contact_button" type="submit" name="submit" value="Submit">
+      </form>
+    </div>
+
+    <div style="display: flex" class="footer">
+
+      <div style="display: flex; width: 200px; justify-content: center; flex-wrap: wrap">
+      <a href="https://github.com/TylerP33"><i style="font-size: 2em; color:#FF5A09;padding: 10px;border: solid 2px #FF5A09;" class="fab fa-github"></i></a>
+    </div>
+
+         <div style="display: flex; width: 200px; justify-content: center; flex-wrap: wrap">
+       <a href="https://www.facebook.com/tyler.pulse.1"/><i style="font-size: 2em; color:#FF5A09;padding: 10px;border: solid 2px #FF5A09;" class="fab fa-facebook-f"></i></a>
+      </div>
+
+    <div style="display: flex; width: 200px; justify-content: center; flex-wrap: wrap">
+      <a href="https://www.linkedin.com/in/tyler-pulse-181405a1"><i style="font-size: 2em; color:#FF5A09;padding: 10px;border: solid 2px #FF5A09;" class="fab fa-linkedin-in"></i></a>
+    </div>
+
+    <div style="display: flex; width: 200px; justify-content: center; flex-wrap: wrap">
+       <a href="https://codepen.io/tylerp33/"><i style="font-size: 2em; color:#FF5A09;padding: 10px;border: solid 2px #FF5A09;" class="fab fa-codepen"></i></a>
+     </div>
+  </div>
+  <div style="padding-top: 50px" class="footnote">Tyler Pulse <span class="highlight">©2018</span></div>
+</div>
+
+
+
+
+
+
+
+
+
+    </div>
+  </div> <!-- image container -->
+</section>
+</div>
 </section>
 </div>
 </body>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </html>
-
-
 
